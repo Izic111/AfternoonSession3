@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script>
+        function add(){
+            var num1 = document.getElementById("box1").value
+            var num2 = document.getElementById("box2").value
+            var answer = Number(num1) + Number(num2)
+            document.getElementById("answer").value = answer
+        }
+        function subtraction(){
+            var num1 = document.getElementById("box1").value
+            var num2 = document.getElementById("box2").value
+            var answer = Number(num1) - Number(num2)
+            document.getElementById("answer").value = answer
+        }
+        function division(){
+            var num1 = document.getElementById("box1").value
+            var num2 = document.getElementById("box2").value
+            var answer = Number(num1) / Number(num2)
+            document.getElementById("answer").value = answer
+        }
+        function multiplication(){
+            var num1 = document.getElementById("box1").value
+            var num2 = document.getElementById("box2").value
+            var answer = Number(num1) * Number(num2)
+            document.getElementById("answer").value = answer
+        }
+        function mod(){
+            var num1 = document.getElementById("box1").value
+            var num2 = document.getElementById("box2").value
+            var answer = Number(num1) % Number(num2)
+            document.getElementById("answer").value = answer 
+        }
+    </script>
+      <input type="number" placeholder="Firstnumber" required id="box1">
+      <input type="number" placeholder="Secondnumber" required id="box2">
+      <input type="number" placeholder="Answer" required id="answer" readonly><br>
+      <button onclick="add()">+</button>
+      <button onclick="subtraction()">-</button>
+      <button onclick="division()">/</button>
+      <button onclick="multiplication()">*</button>
+      <button onclick="mod()">%</button>
+</body>
+</html>

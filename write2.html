@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="displayname"></h1>
+        <h6 id="email"></h6>
+        <h6 id="phonenumber"></h6>
+        <img src="" alt="" id="profilepicture">
+    </div>
+    <script>
+        async function work(){
+            try{
+                let work = await axios.get('https://jsonplaceholder.typicode.com/users')
+
+                document.getElementById("displayname").innerHTML = work.data[0].displayname
+                document.getElementsById("email").innerHTML = work.data[0].email
+                document.getElementsById("phonenumber").innerHTML = work.data[0].phonenumber
+                document.getElementsById("profilepicture").src ="img1/" + work.data[0].profilepicture
+            }
+            catch (err){
+                console.error (err)
+            }
+        }
+        work()
+    </script>
+</body>
+</html>

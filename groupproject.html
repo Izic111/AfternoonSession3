@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .checker{
+            text-align: center;
+            background-image: url(comrade\ weh\ sabi\ 4.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            padding-top: 15%;
+        }
+        .checker input{
+            font-size: 50;
+            border-color:gold;
+            border-radius: 100px 100px;
+            text-decoration: navy;
+        }
+        .checker button{
+            font-size:50 ;
+            border-radius: 50px 50px;
+            border-color: gold;
+            font-style: oblique;
+            background-color:gold;
+        }
+        .checker p {
+            font-size: 70;
+            color: gold;
+            font-style:oblique;
+        }
+    </style>
+</head>
+<body class="checker">
+    <h1 style="color:gold;font-style: bold; font-size: 50;">***AGE CHECKER***</h1>
+    <input type="number" id="checker" placeholder="Age" style="text-align: center;"><br><br>
+    <button onclick="check()">Check</button>
+    
+    <p id="message"></p>
+<script>
+    function check(){
+        var age1 = document.getElementById ("checker").value 
+        if(age1 >=1 && age1<=17){
+           document.getElementById("message").innerHTML = "User is a child" 
+        }
+        else if(age1 >=18 && age1 <=29){
+            document.getElementById("message").innerHTML = "User is a teenager" 
+        }
+        else if(age1 >=30 && age1 <=79){
+            document.getElementById("message").innerHTML = "User is an adult" 
+        }
+        else if(age1 <1){
+            document.getElementById("message").innerHTML = "Input a valid age"
+        }
+        else{
+            document.getElementById("message").innerHTML = "Above requirment" 
+
+        }
+    }
+    
+    
+</script>
+</body>
+</html>
